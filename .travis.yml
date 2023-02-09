@@ -1,0 +1,19 @@
+arch:
+  - arm64
+os: linux
+dist: focal
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t moussavdb/application-retro-website:latest .
+script:
+  - docker images moussavdb/application-retro-website
+  
+after_success:
+  - docker login -u="moussavdb" -p="$DOCKER_PASSWORD";
+    docker push moussavdb/application-retro-website:latest;
+
