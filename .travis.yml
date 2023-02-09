@@ -1,9 +1,10 @@
+language: generic
 arch:
   - arm64
 os: linux
 dist: focal
 
-language: ruby
+
 
 services:
   - docker
