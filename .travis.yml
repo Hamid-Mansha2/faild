@@ -10,7 +10,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t moussavdb/application-retro-website:latest .
+  - docker build -t moussavdb/application-retro-website.txt:latest .
 script:
   - docker images moussavdb/application-retro-website
   
